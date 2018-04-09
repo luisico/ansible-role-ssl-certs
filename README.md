@@ -69,6 +69,10 @@ ssl_certs_local_cert_data: |
 
 Then simply include the role as in the first example.
 
+## Example combining the private key and certificate in the same file
+
+This role also generates a combined file with the private key and the certifcate, which is needed by some software, ie `haproxy`. The default path is "{{ssl_certs_path}}/{{ssl_certs_common_name}}.combined.pem", but you can change it tweaking `ssl_certs_combined_path` in your playbook.
+
 ## Example to use this role with my Nginx role: [jdauphant.nginx](https://github.com/jdauphant/ansible-role-nginx)
 
 ```YAML
